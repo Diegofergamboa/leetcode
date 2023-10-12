@@ -14,8 +14,7 @@ var romanToInt = function (s) {
 }
 
     let numberConverted = 0
-    const sToArraySplit = s.split('')
-    const sToArray = sToArraySplit.map(number => numberPivot[number])
+    const sToArray = s.split('').map(number => numberPivot[number])
 
     for (let i = 0; i < sToArray.length; i++) {
       

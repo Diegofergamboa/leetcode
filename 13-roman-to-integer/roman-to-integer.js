@@ -2,7 +2,8 @@
  * @param {string} s
  * @return {number}
  */
-const numberPivot = {
+var romanToInt = function (s) {
+    const numberPivot = {
     'I': 1,
     'V': 5,
     'X': 10,
@@ -12,7 +13,6 @@ const numberPivot = {
     'M': 1000,
 }
 
-var romanToInt = function (s) {
     let numberConverted = 0
     const sToArraySplit = s.split('')
     const sToArray = sToArraySplit.map(number => numberPivot[number])
@@ -27,6 +27,6 @@ var romanToInt = function (s) {
             numberConverted += sToArray[i]
         }
     }
-    
+
     return numberConverted
 }

@@ -3,11 +3,7 @@
  * @return {number}
  */
 var argumentsLength = function(...args) {
-    const stack = []
-    for (const arg of args) {
-      stack.push(arg)
-    }
-    return stack.length
+    return args.length
 };
 
 /**

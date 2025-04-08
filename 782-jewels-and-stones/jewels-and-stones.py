@@ -5,17 +5,15 @@ class Solution(object):
         :type stones: str
         :rtype: int
         """
-        coincidences_counter = 0
-        pointer = len(stones) - 1
+        count = {}
+        jewels_in_stones = 0
 
-        jewelsList = list(jewels)
-        stoneslist = list(stones)
+        for letter in stones:
+            count[letter] = count.get(letter, 0) + 1
 
 
-        while pointer >= 0:
-            if stoneslist[pointer] in jewelsList:
-                coincidences_counter += 1
+        for jewel in jewels:
+            if count.get(jewel):
+                jewels_in_stones += count[jewel]
 
-            pointer -= 1
-
-        return coincidences_counter
+        return jewels_in_stones
